@@ -11,6 +11,7 @@
                     </p>
                 @endif
             </div>
+            <p style='color:green'>{{ (isset($success)) ? $success : '' }}</p>
             <table class="table table-striped">
                 <thead>
                 <tr>

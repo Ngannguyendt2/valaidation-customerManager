@@ -11,6 +11,14 @@
                     </p>
                 @endif
             </div>
+            <div class="error-message">
+                @if ($errors->any())
+                    @foreach($errors->all() as $nameError)
+                        <p style="color:red">{{ $nameError }}</p>
+                    @endforeach
+
+                @endif
+            </div>
             <form method="post" action="{{route('customers.store')}}">
                 @csrf
                 <div class="form-group">

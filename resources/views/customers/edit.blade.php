@@ -1,6 +1,14 @@
 @extends('home')
 @section('title', 'SỬA THÔNG TIN KHÁCH HÀNG ')
 @section('content')
+    <div class="error-message">
+        @if ($errors->any())
+            @foreach($errors->all() as $nameError)
+                <p style="color:red">{{ $nameError }}</p>
+            @endforeach
+
+        @endif
+    </div>
     <div class="col-12">
         <div class="row">
             <div class="col-12"><h1>SỬA THÔNG TIN KHÁCH HÀNG</h1></div>
